@@ -33,6 +33,7 @@
             <img class="banner-img-5" src="./images/banner-images/bannar-img-5.png" alt="">
             <img class="banner-img-3" src="./images/banner-images/bannar-img-3.png" alt="">
         </header>
+
         <main>
             <section class="mt-20 flex gap-6 px-[387.5px]">
                 <div class="grid grid-cols-3 gap-6">
@@ -127,31 +128,33 @@
                         <h1 class="text-white text-2xl text-center p-8">Budget</h1>
                         <div class="flex justify-between ml-4 mr-4">
                             <p class="text-white">Per Player</p>
-                            <input class="w-2/4 border-solid border-1 border-white" type="text" id="">
+                            <input  class="w-2/4 border-solid border-1 border-white" type="text" id="per-player-value">
                         </div>
-                        <button class="text-white bg-blue-600 text-xl pl-20 pr-20 py-2 mt-6 ml-3">Calculate</button>
+                        <button id="player-value-calculate" class="text-white bg-blue-600 text-xl pl-20 pr-20 py-2 mt-6 ml-3">Calculate</button>
                         <div class="flex justify-between ml-4 mr-4 pt-4">
                             <h1 class="text-white">Player Expenses</h1>
-                            <p class="text-white">$<span>0000</span></p>
+                            <p class="text-white">$<span id="player-expenses-total">0000</span></p>
                         </div>
                         <div class="flex justify-between ml-4 mr-4 mt-6">
                             <p class="text-white">Manager</p>
-                            <input class="w-2/4 border-solid border-1 border-white" type="text" id="">
+                            <input class="w-2/4 border-solid border-1 border-white" type="text" id="manager-value">
                         </div>
                         <div class="flex justify-between ml-4 mr-4 mt-6">
                             <p class="text-white">Coach</p>
-                            <input class="w-2/4 border-solid border-1 border-white" type="text" id="">
+                            <input class="w-2/4 border-solid border-1 border-white" type="text" id="coach-value">
                         </div>
-                        <button class="text-white bg-blue-600 text-xl pl-[58px] pr-[58px] py-2 mt-6 ml-3">Calculate Total</button>
+                        <button id="calculate-total" class="text-white bg-blue-600 text-xl pl-[58px] pr-[58px] py-2 mt-6 ml-3">Calculate Total</button>
                         <div class="flex justify-between ml-4 mr-4 pt-4 mt-6">
                             <h1 class="text-white">Total</h1>
-                            <p class="text-white">$<span class="total-amount">0000</span></p>
+                            <p class="text-white">$<span id="total-amount" class="total-amount">0000</span></p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+
         <hr class="w-full mt-[9.125rem]">
+
         <footer class="h-[118px] flex justify-center items-center">
             <p class="text-white">Copyright @ 2022 All Rights Reserved.</p>
         </footer>
