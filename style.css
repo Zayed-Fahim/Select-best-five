@@ -1,3 +1,6 @@
+body{
+    background: #151515;
+}
 /* header part */
 .header-text span{
     color: #FF5E19;
@@ -40,7 +43,7 @@
     position: absolute;
     width: 479.5px;
     height: 335px;
-    left: 1740px;
+    left: 1720px;
     top: 146px;
     background: rgba(255, 255, 255, 0.1);
 }
@@ -55,3 +58,117 @@
 /* header done */
 
 /* main part */
+.player-div-1{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-1{
+    width: 264px;
+    height: 204px;
+}
+.player-div-1 h1{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.player-div-2{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-2{
+    width: 264px;
+    height: 204px;
+}
+.player-div-2 h1{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.player-div-3{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-3{
+    width: 264px;
+    height: 204px;
+}
+.player-div-3 h1{
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.player-div-4{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-4{
+    width: 264px;
+    height: 204px;
+}
+.player-div-4 h1{
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.player-div-5{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-5{
+    width: 264px;
+    height: 204px;
+}
+.player-div-5 h1{
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.player-div-6{
+    width: 264px;
+    height: 371px;
+    background: #0D0D0D;
+    border: 1px solid #434343;
+}
+.body-img-6{
+    width: 264px;
+    height: 204px;
+}
+.player-div-6 h1{
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+.selected-players{
+    width: 264px;
+    height: 371px;
+    font-family: 'Manrope';
+    background: #0D0D0D;
+}
+.total-budget{
+    width: 264px;
+    height: 514px;;
+    font-family: 'Manrope';
+    background: #0D0D0D;
+}
+.total-amount{
+    color: #FF5E19;
+}
+
