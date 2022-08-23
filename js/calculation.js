@@ -17,36 +17,57 @@ selectPlayers.forEach((player) => {
         else {
             alert('Reached maximum players!!');
         }
-        
     })
 })
-
 const perPlayer = document.getElementById('per-player-value');
 const playerExpenseTotal = document.querySelector('#player-expenses-total');
 const perManager = document.getElementById('manager-value');
 const perCoach = document.getElementById('coach-value');
 const calculateTotalExpences = document.querySelector('#calculate-total');
 const innerTextValueOfTotalExpenses = document.getElementById('total-amount');
-const x_y = 0;
-
+function isNegative(input) {
+    if (parseFloat(input) >= 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
 function calculatePlayerTotalValue() {
     const totalPlayer = playerList.querySelectorAll('li').length;
-    const expense = parseFloat(perPlayer.value) * totalPlayer;
-    playerExpenseTotal.textContent = expense;
-    return expense;
+    const checkPlayerValueNegative = isNegative(perPlayer.value);
+    if (checkPlayerValueNegative == false) {
+        const expense = parseFloat(perPlayer.value) * totalPlayer;
+        playerExpenseTotal.textContent = expense;
+        return expense;
+    }
+    else {
+        alert('Enter valid player expenses!!')
+        return '';
+    }
+    
 }
-
 document.getElementById('player-value-calculate').addEventListener('click', calculatePlayerTotalValue);
-
 document.getElementById('calculate-total').addEventListener('click', function () {
     const perManagerString = perManager.value;
+    const checkManagerValueNegative = isNegative(perManager.value);
+    if (checkManagerValueNegative === true) {
+        alert('Enter valid manager expenses!!')
+    }
     const managerInputFieldValue = parseFloat(perManagerString);
     const perCoachString = perCoach.value;
+    const checkCoachValueNegative = isNegative(perCoach.value);
+    if (checkCoachValueNegative === true) {
+        alert('Enter valid coach expenses!!')
+    }
     const coachinputFieldValue = parseFloat(perCoachString);
-    const totalPlayerlength = playerList.querySelectorAll('li').length;
-    const allPlayersCost = parseFloat(perPlayer.value) * totalPlayerlength;
-    const managerCoachTotalExpenses = managerInputFieldValue + coachinputFieldValue + allPlayersCost;
-    innerTextValueOfTotalExpenses.innerText = managerCoachTotalExpenses
-    
+    if (checkManagerValueNegative === false && checkCoachValueNegative === false) {
+        const totalPlayerlength = playerList.querySelectorAll('li').length;
+        const allPlayersCost = parseFloat(perPlayer.value) * totalPlayerlength;
+        const managerCoachTotalExpenses = managerInputFieldValue + coachinputFieldValue + allPlayersCost;
+        innerTextValueOfTotalExpenses.innerText = managerCoachTotalExpenses;
+    }
 });
+
+
 
