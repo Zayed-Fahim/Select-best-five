@@ -1,32 +1,3 @@
-// // let flag = true;
-// document.getElementById('player-value-calculate').addEventListener('click', function () {
-//     const value = calculatePlayerTotalValue('per-player-value');
-//     // console.log(value)
-//     // if (isNaN(value) === '') {
-//     //     flag = true;
-//     //     alert('Please enter a valid player expenses!!');
-//     // }
-//     // if(flag == true) {
-//         const innerFieldValue = seetTextValueById('player-expenses-total');
-//         const playerTotalValue = value + innerFieldValue;
-//         const innerTextValue = document.getElementById('player-expenses-total');
-//         innerTextValue.innerText = playerTotalValue;
-//         const calculateValue = innerTextValue.innerText;
-//         // flag = false;
-//     // }
-// })
-// document.getElementById('calculate-total').addEventListener('click', function () {
-//     const managerValue = getValueById('manager-value');
-//     const coachValue = getValueById('coach-value');
-//     const totalPlayerExpenses = calculatePlayerTotalValue('per-player-value');
-//     const totalExpenses = managerValue + coachValue+totalPlayerExpenses;
-//     const innerTextValue = document.getElementById('total-amount');
-//     innerTextValue.innerText = totalExpenses;
-//     const allTotal = innerTextValue.innerText;
-// })
-// document.getElementsByClassName('player-choose-btn').addEventListener('click', function () {
-    
-// })
 const selectPlayers = document.querySelectorAll('.player-card');
 const playerList = document.querySelector('.player-list');
 
@@ -55,19 +26,27 @@ const playerExpenseTotal = document.querySelector('#player-expenses-total');
 const perManager = document.getElementById('manager-value');
 const perCoach = document.getElementById('coach-value');
 const calculateTotalExpences = document.querySelector('#calculate-total');
-
+const innerTextValueOfTotalExpenses = document.getElementById('total-amount');
+const x_y = 0;
 
 function calculatePlayerTotalValue() {
     const totalPlayer = playerList.querySelectorAll('li').length;
-    const expense = parseInt(perPlayer.value) * totalPlayer;
+    const expense = parseFloat(perPlayer.value) * totalPlayer;
     playerExpenseTotal.textContent = expense;
-    perPlayer.value = '';
     return expense;
 }
 
 document.getElementById('player-value-calculate').addEventListener('click', calculatePlayerTotalValue);
 
 document.getElementById('calculate-total').addEventListener('click', function () {
+    const perManagerString = perManager.value;
+    const managerInputFieldValue = parseFloat(perManagerString);
+    const perCoachString = perCoach.value;
+    const coachinputFieldValue = parseFloat(perCoachString);
+    const totalPlayerlength = playerList.querySelectorAll('li').length;
+    const allPlayersCost = parseFloat(perPlayer.value) * totalPlayerlength;
+    const managerCoachTotalExpenses = managerInputFieldValue + coachinputFieldValue + allPlayersCost;
+    innerTextValueOfTotalExpenses.innerText = managerCoachTotalExpenses
     
 });
 
